@@ -182,6 +182,8 @@ def main():
                     print("Fuck this shit")
                 else:
                     print json.dumps(m)
+		    if not "text" in m["message"]:
+			continue
                     text = m["message"]["text"]
                     #print text
                     to = m["message"]["from"]["id"]
